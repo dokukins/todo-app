@@ -2,7 +2,7 @@
   <div
     class="w-10 h-10 bg-gray-500 rounded-full cursor-pointer relative"
     @click.stop="showProfile"
-    v-outside="showProfile"
+    v-outside="closeProfile"
   >
     <ul
       v-if="profileVisible && user"
@@ -39,6 +39,10 @@ let profileVisible = ref(false);
 
 const showProfile = () => {
   profileVisible.value = !profileVisible.value;
+};
+
+const closeProfile = () => {
+  profileVisible.value = false;
 };
 </script>
 
