@@ -31,7 +31,7 @@ const router = useRouter();
 
 const signOutUser = async () => {
   await authStore.signOutUser();
-  router.push("/");
+  router.push("/register");
 };
 </script>
 
