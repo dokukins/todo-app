@@ -11,10 +11,7 @@ const app = createApp(App);
 app.directive("outside", {
   mounted(el, binding) {
     document.addEventListener("click", (event) => {
-      if (
-        (event.target != el || event.target != el.children) &&
-        el.firstChild.data != "v-if"
-      ) {
+      if (event.target != el) {
         binding.value();
       }
     });
